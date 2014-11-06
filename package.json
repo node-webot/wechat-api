@@ -27,11 +27,8 @@
     "wechat-crypto": "0.0.1"
   },
   "devDependencies": {
-    "supertest": "*",
     "mocha": "*",
-    "should": "~3.0.0",
     "expect.js": "*",
-    "connect": "2.5.*",
     "travis-cov": "*",
     "coveralls": "*",
     "mocha-lcov-reporter": "*",
