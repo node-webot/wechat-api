@@ -40,6 +40,6 @@ API.mixin(require('./lib/api_url'));
 // 语义查询接口
 API.mixin(require('./lib/api_semantic'));
 // 获取微信服务器IP地址
-API.mixin(require('./lib/api_get_ip'));
+API.mixin(require('./lib/api_ip'));
 
 module.exports = API;

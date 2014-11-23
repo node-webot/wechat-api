@@ -8,15 +8,6 @@ describe('api_custom_service', function () {
   var api = new API(config.appid, config.appsecret);
 
   describe('getRecords', function () {
-    it('should unauthorized with empty list', function (done) {
-      api.updateFeedback('openid', 'feedback_id', function (err, data, res) {
-        expect(err).to.be.ok();
-        expect(data).to.have.property('errcode', 48001);
-        expect(data).to.have.property('errmsg', 'api unauthorized');
-        done();
-      });
-    });
-
     describe('getRecords mock', function () {
       before(function () {
         muk(urllib, 'request', function (url, args, callback) {
@@ -57,9 +48,8 @@ describe('api_custom_service', function () {
   describe('getCustomServiceList', function () {
     it('should unauthorized', function (done) {
       api.getCustomServiceList(function (err, data, res) {
-        expect(err).to.be.ok();
-        expect(data).to.have.property('errcode');
-        expect(data).to.have.property('errmsg');
+        expect(err).not.to.be.ok();
+        expect(data).to.have.property('kf_list');
         done();
       });
     });
@@ -68,9 +58,8 @@ describe('api_custom_service', function () {
   describe('getOnlineCustomServiceList', function () {
     it('should unauthorized', function (done) {
       api.getOnlineCustomServiceList(function (err, data, res) {
-        expect(err).to.be.ok();
-        expect(data).to.have.property('errcode');
-        expect(data).to.have.property('errmsg');
+        expect(err).not.to.be.ok();
+        expect(data).to.have.property('kf_online_list');
         done();
       });
     });

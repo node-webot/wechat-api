@@ -2,7 +2,7 @@ var expect = require('expect.js');
 var config = require('./config');
 var API = require('../');
 
-describe('valid appid', function () {
+describe('api_qrcode', function () {
   var api = new API(config.appid, config.appsecret);
   before(function (done) {
     api.getAccessToken(done);
