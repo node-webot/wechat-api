@@ -38,7 +38,7 @@
     </nav>
     <header class="jumbotron subhead">
       <div class="container">
-        <h1>wechat-api <small>Version: 1.0.1 By @Jackson Tian</small></h1>
+        <h1>wechat-api <small>Version: 1.2.2 By @Jackson Tian</small></h1>
         <p class="lead">
           微信公共平台Node库 API
         </p>
@@ -51,96 +51,964 @@
       <ul class="nav nav-list bs-docs-sidenav affix">
 
   <li>
-    <a href="#api_api_common"><i class="icon-chevron-right"></i>api_common</a>
+		<div class="accordion" id="api_common">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_common" class="api_side_link">api_common</a>
+					<div class="accordion-marker" id="collapse_marker_api_common">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_common" href="#collapse_api_common">
+							 <span id="toggle_api_common" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_common">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_common__API">API</a>
+						</li>
+					
+						<li>
+							<a href="#api_common__setOpts">setOpts</a>
+						</li>
+					
+						<li>
+							<a href="#api_common__request">request</a>
+						</li>
+					
+						<li>
+							<a href="#api_common__getLatestToken">getLatestToken</a>
+						</li>
+					
+						<li>
+							<a href="#api_common_API_mixin">mixin</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_common').on('click', function() {
+    	$('#toggle_api_common').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_custom_service"><i class="icon-chevron-right"></i>api_custom_service</a>
+		<div class="accordion" id="api_custom_service">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_custom_service" class="api_side_link">api_custom_service</a>
+					<div class="accordion-marker" id="collapse_marker_api_custom_service">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_custom_service" href="#collapse_api_custom_service">
+							 <span id="toggle_api_custom_service" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_custom_service">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_custom_service_exports_getRecords">getRecords</a>
+						</li>
+					
+						<li>
+							<a href="#api_custom_service_exports_getCustomServiceList">getCustomServiceList</a>
+						</li>
+					
+						<li>
+							<a href="#api_custom_service_exports_getOnlineCustomServiceList">getOnlineCustomServiceList</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_custom_service').on('click', function() {
+    	$('#toggle_api_custom_service').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_feedback"><i class="icon-chevron-right"></i>api_feedback</a>
+		<div class="accordion" id="api_feedback">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_feedback" class="api_side_link">api_feedback</a>
+					<div class="accordion-marker" id="collapse_marker_api_feedback">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_feedback" href="#collapse_api_feedback">
+							 <span id="toggle_api_feedback" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_feedback">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_feedback_exports_updateFeedback">updateFeedback</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_feedback').on('click', function() {
+    	$('#toggle_api_feedback').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_group"><i class="icon-chevron-right"></i>api_group</a>
+		<div class="accordion" id="api_group">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_group" class="api_side_link">api_group</a>
+					<div class="accordion-marker" id="collapse_marker_api_group">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_group" href="#collapse_api_group">
+							 <span id="toggle_api_group" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_group">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_group_exports_getGroups">getGroups</a>
+						</li>
+					
+						<li>
+							<a href="#api_group_exports_getWhichGroup">getWhichGroup</a>
+						</li>
+					
+						<li>
+							<a href="#api_group_exports_createGroup">createGroup</a>
+						</li>
+					
+						<li>
+							<a href="#api_group_exports_updateGroup">updateGroup</a>
+						</li>
+					
+						<li>
+							<a href="#api_group_exports_moveUserToGroup">moveUserToGroup</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_group').on('click', function() {
+    	$('#toggle_api_group').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_ip"><i class="icon-chevron-right"></i>api_ip</a>
+		<div class="accordion" id="api_ip">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_ip" class="api_side_link">api_ip</a>
+					<div class="accordion-marker" id="collapse_marker_api_ip">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_ip" href="#collapse_api_ip">
+							 <span id="toggle_api_ip" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_ip">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_ip_exports_getIp">getIp</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_ip').on('click', function() {
+    	$('#toggle_api_ip').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_mass_send"><i class="icon-chevron-right"></i>api_mass_send</a>
+		<div class="accordion" id="api_mass_send">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_mass_send" class="api_side_link">api_mass_send</a>
+					<div class="accordion-marker" id="collapse_marker_api_mass_send">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_mass_send" href="#collapse_api_mass_send">
+							 <span id="toggle_api_mass_send" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_mass_send">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_mass_send_exports_uploadNews">uploadNews</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_uploadMPVideo">uploadMPVideo</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_massSend">massSend</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_massSendNews">massSendNews</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_massSendText">massSendText</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_massSendVoice">massSendVoice</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_massSendImage">massSendImage</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_massSendVideo">massSendVideo</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_massSendMPVideo">massSendMPVideo</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_deleteMass">deleteMass</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_previewNews">previewNews</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_previewText">previewText</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_previewVoice">previewVoice</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_previewImage">previewImage</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_previewVideo">previewVideo</a>
+						</li>
+					
+						<li>
+							<a href="#api_mass_send_exports_getMassMessageStatus">getMassMessageStatus</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_mass_send').on('click', function() {
+    	$('#toggle_api_mass_send').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_media"><i class="icon-chevron-right"></i>api_media</a>
+		<div class="accordion" id="api_media">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_media" class="api_side_link">api_media</a>
+					<div class="accordion-marker" id="collapse_marker_api_media">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_media" href="#collapse_api_media">
+							 <span id="toggle_api_media" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_media">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_media_exports_uploadMedia">uploadMedia</a>
+						</li>
+					
+						<li>
+							<a href="#api_media_exports_getMedia">getMedia</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_media').on('click', function() {
+    	$('#toggle_api_media').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_menu"><i class="icon-chevron-right"></i>api_menu</a>
+		<div class="accordion" id="api_menu">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_menu" class="api_side_link">api_menu</a>
+					<div class="accordion-marker" id="collapse_marker_api_menu">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_menu" href="#collapse_api_menu">
+							 <span id="toggle_api_menu" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_menu">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_menu_exports_createMenu">createMenu</a>
+						</li>
+					
+						<li>
+							<a href="#api_menu_exports_getMenu">getMenu</a>
+						</li>
+					
+						<li>
+							<a href="#api_menu_exports_removeMenu">removeMenu</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_menu').on('click', function() {
+    	$('#toggle_api_menu').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_message"><i class="icon-chevron-right"></i>api_message</a>
+		<div class="accordion" id="api_message">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_message" class="api_side_link">api_message</a>
+					<div class="accordion-marker" id="collapse_marker_api_message">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_message" href="#collapse_api_message">
+							 <span id="toggle_api_message" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_message">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_message_exports_sendText">sendText</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendImage">sendImage</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendVoice">sendVoice</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendVideo">sendVideo</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendMusic">sendMusic</a>
+						</li>
+					
+						<li>
+							<a href="#api_message_exports_sendNews">sendNews</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_message').on('click', function() {
+    	$('#toggle_api_message').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_payment"><i class="icon-chevron-right"></i>api_payment</a>
+		<div class="accordion" id="api_payment">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_payment" class="api_side_link">api_payment</a>
+					<div class="accordion-marker" id="collapse_marker_api_payment">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_payment" href="#collapse_api_payment">
+							 <span id="toggle_api_payment" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_payment">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_payment_exports_deliverNotify">deliverNotify</a>
+						</li>
+					
+						<li>
+							<a href="#api_payment_exports_orderQuery">orderQuery</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_payment').on('click', function() {
+    	$('#toggle_api_payment').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_qrcode"><i class="icon-chevron-right"></i>api_qrcode</a>
+		<div class="accordion" id="api_qrcode">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_qrcode" class="api_side_link">api_qrcode</a>
+					<div class="accordion-marker" id="collapse_marker_api_qrcode">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_qrcode" href="#collapse_api_qrcode">
+							 <span id="toggle_api_qrcode" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_qrcode">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_qrcode_exports_createTmpQRCode">createTmpQRCode</a>
+						</li>
+					
+						<li>
+							<a href="#api_qrcode_exports_createLimitQRCode">createLimitQRCode</a>
+						</li>
+					
+						<li>
+							<a href="#api_qrcode_exports_showQRCodeURL">showQRCodeURL</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_qrcode').on('click', function() {
+    	$('#toggle_api_qrcode').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_semantic"><i class="icon-chevron-right"></i>api_semantic</a>
+		<div class="accordion" id="api_semantic">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_semantic" class="api_side_link">api_semantic</a>
+					<div class="accordion-marker" id="collapse_marker_api_semantic">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_semantic" href="#collapse_api_semantic">
+							 <span id="toggle_api_semantic" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_semantic">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_semantic_exports_semantic">semantic</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_semantic').on('click', function() {
+    	$('#toggle_api_semantic').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_shop_common"><i class="icon-chevron-right"></i>api_shop_common</a>
+		<div class="accordion" id="api_shop_common">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_shop_common" class="api_side_link">api_shop_common</a>
+					<div class="accordion-marker" id="collapse_marker_api_shop_common">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_shop_common" href="#collapse_api_shop_common">
+							 <span id="toggle_api_shop_common" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_shop_common">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_shop_common_exports_uploadPicture">uploadPicture</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_shop_common').on('click', function() {
+    	$('#toggle_api_shop_common').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_shop_express"><i class="icon-chevron-right"></i>api_shop_express</a>
+		<div class="accordion" id="api_shop_express">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_shop_express" class="api_side_link">api_shop_express</a>
+					<div class="accordion-marker" id="collapse_marker_api_shop_express">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_shop_express" href="#collapse_api_shop_express">
+							 <span id="toggle_api_shop_express" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_shop_express">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_shop_express_exports_addExpressTemplate">addExpressTemplate</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_express_exports_deleteExpressTemplate">deleteExpressTemplate</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_express_exports_updateExpressTemplate">updateExpressTemplate</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_express_exports_getExpressTemplateById">getExpressTemplateById</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_express_exports_getAllExpressTemplates">getAllExpressTemplates</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_shop_express').on('click', function() {
+    	$('#toggle_api_shop_express').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_shop_goods"><i class="icon-chevron-right"></i>api_shop_goods</a>
+		<div class="accordion" id="api_shop_goods">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_shop_goods" class="api_side_link">api_shop_goods</a>
+					<div class="accordion-marker" id="collapse_marker_api_shop_goods">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_shop_goods" href="#collapse_api_shop_goods">
+							 <span id="toggle_api_shop_goods" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_shop_goods">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_shop_goods_exports_createGoods">createGoods</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_goods_exports_getGoods">getGoods</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_shop_goods').on('click', function() {
+    	$('#toggle_api_shop_goods').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_shop_group"><i class="icon-chevron-right"></i>api_shop_group</a>
+		<div class="accordion" id="api_shop_group">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_shop_group" class="api_side_link">api_shop_group</a>
+					<div class="accordion-marker" id="collapse_marker_api_shop_group">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_shop_group" href="#collapse_api_shop_group">
+							 <span id="toggle_api_shop_group" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_shop_group">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_shop_group_exports_createGoodsGroup">createGoodsGroup</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_group_exports_deleteGoodsGroup">deleteGoodsGroup</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_group_exports_updateGoodsGroup">updateGoodsGroup</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_group_exports_updateGoodsForGroup">updateGoodsForGroup</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_group_exports_getAllGroups">getAllGroups</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_group_exports_getGroupById">getGroupById</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_shop_group').on('click', function() {
+    	$('#toggle_api_shop_group').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_shop_order"><i class="icon-chevron-right"></i>api_shop_order</a>
+		<div class="accordion" id="api_shop_order">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_shop_order" class="api_side_link">api_shop_order</a>
+					<div class="accordion-marker" id="collapse_marker_api_shop_order">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_shop_order" href="#collapse_api_shop_order">
+							 <span id="toggle_api_shop_order" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_shop_order">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_shop_order_exports_getOrderById">getOrderById</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_order_exports_getOrdersByStatus">getOrdersByStatus</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_order_exports_setExpressForOrder">setExpressForOrder</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_order_exports_closeOrder">closeOrder</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_shop_order').on('click', function() {
+    	$('#toggle_api_shop_order').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_shop_shelf"><i class="icon-chevron-right"></i>api_shop_shelf</a>
+		<div class="accordion" id="api_shop_shelf">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_shop_shelf" class="api_side_link">api_shop_shelf</a>
+					<div class="accordion-marker" id="collapse_marker_api_shop_shelf">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_shop_shelf" href="#collapse_api_shop_shelf">
+							 <span id="toggle_api_shop_shelf" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_shop_shelf">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_shop_shelf_exports_createShelf">createShelf</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_shelf_exports_deleteShelf">deleteShelf</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_shelf_exports_updateShelf">updateShelf</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_shelf_exports_getAllShelves">getAllShelves</a>
+						</li>
+					
+						<li>
+							<a href="#api_shop_shelf_exports_getShelfById">getShelfById</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_shop_shelf').on('click', function() {
+    	$('#toggle_api_shop_shelf').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_shop_stock"><i class="icon-chevron-right"></i>api_shop_stock</a>
+		<div class="accordion" id="api_shop_stock">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_shop_stock" class="api_side_link">api_shop_stock</a>
+					<div class="accordion-marker" id="collapse_marker_api_shop_stock">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_shop_stock" href="#collapse_api_shop_stock">
+							 <span id="toggle_api_shop_stock" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_shop_stock">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_shop_stock_exports_updateStock">updateStock</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_shop_stock').on('click', function() {
+    	$('#toggle_api_shop_stock').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_template"><i class="icon-chevron-right"></i>api_template</a>
+		<div class="accordion" id="api_template">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_template" class="api_side_link">api_template</a>
+					<div class="accordion-marker" id="collapse_marker_api_template">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_template" href="#collapse_api_template">
+							 <span id="toggle_api_template" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_template">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_template_exports_setIndustry">setIndustry</a>
+						</li>
+					
+						<li>
+							<a href="#api_template_exports_addTemplate">addTemplate</a>
+						</li>
+					
+						<li>
+							<a href="#api_template_exports_sendTemplate">sendTemplate</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_template').on('click', function() {
+    	$('#toggle_api_template').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_url"><i class="icon-chevron-right"></i>api_url</a>
+		<div class="accordion" id="api_url">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_url" class="api_side_link">api_url</a>
+					<div class="accordion-marker" id="collapse_marker_api_url">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_url" href="#collapse_api_url">
+							 <span id="toggle_api_url" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_url">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_url_exports_shorturl">shorturl</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_url').on('click', function() {
+    	$('#toggle_api_url').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_api_user"><i class="icon-chevron-right"></i>api_user</a>
+		<div class="accordion" id="api_user">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_api_user" class="api_side_link">api_user</a>
+					<div class="accordion-marker" id="collapse_marker_api_user">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#api_user" href="#collapse_api_user">
+							 <span id="toggle_api_user" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_api_user">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+						<li>
+							<a href="#api_user_exports_getUser">getUser</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_getFollowers">getFollowers</a>
+						</li>
+					
+						<li>
+							<a href="#api_user_exports_updateRemark">updateRemark</a>
+						</li>
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_api_user').on('click', function() {
+    	$('#toggle_api_user').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
   <li>
-    <a href="#api_util"><i class="icon-chevron-right"></i>util</a>
+		<div class="accordion" id="util">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a href="#api_util" class="api_side_link">util</a>
+					<div class="accordion-marker" id="collapse_marker_util">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#util" href="#collapse_util">
+							 <span id="toggle_util" class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="accordion-body collapse" id="collapse_util">
+					<div class="accordion-inner">
+					<ul class="indexs">
+					
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
   </li>
+  
+  <script type="text/javascript">
+    $('#collapse_marker_util').on('click', function() {
+    	$('#toggle_util').toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+    });
+  </script>
 
 </ul>
 
@@ -153,6 +1021,14 @@
   
     <li>
       <a href="#api_common__API">API</a>
+    </li>
+
+    <li>
+      <a href="#api_common__setOpts">setOpts</a>
+    </li>
+
+    <li>
+      <a href="#api_common__request">request</a>
     </li>
 
     <li>
@@ -229,6 +1105,66 @@ var api = new API(&#39;appid&#39;, &#39;secret&#39;);
       <td>参数</td>
       <td>saveToken(Function)</td>
       <td colspan="2">可选的。保存全局token对象的方法，多进程模式部署时需在意</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_common__setOpts">
+    setOpts
+  </h3>
+  
+
+  <p>用于设置urllib的默认options</p><p>Examples:</p><pre><code>api.setOpts({timeout: 15000});
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>API.prototype.setOpts()</td> 
+      <td></td>
+      <td>setOpts</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>opts(Object)</td>
+      <td colspan="2">默认选项</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_common__request">
+    request
+  </h3>
+  
+
+  <p>设置urllib的hook</p><p>Examples:</p><pre><code>api.setHook(function (options) {
+  // options
+});
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>API.prototype.request()</td> 
+      <td></td>
+      <td>request</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>beforeRequest(Function)</td>
+      <td colspan="2">需要封装的方法</td>
     </tr>
   
 
@@ -906,6 +1842,30 @@ API.mixin(require(&#39;./lib/api_media&#39;));
       <a href="#api_mass_send_exports_deleteMass">deleteMass</a>
     </li>
 
+    <li>
+      <a href="#api_mass_send_exports_previewNews">previewNews</a>
+    </li>
+
+    <li>
+      <a href="#api_mass_send_exports_previewText">previewText</a>
+    </li>
+
+    <li>
+      <a href="#api_mass_send_exports_previewVoice">previewVoice</a>
+    </li>
+
+    <li>
+      <a href="#api_mass_send_exports_previewImage">previewImage</a>
+    </li>
+
+    <li>
+      <a href="#api_mass_send_exports_previewVideo">previewVideo</a>
+    </li>
+
+    <li>
+      <a href="#api_mass_send_exports_getMassMessageStatus">getMassMessageStatus</a>
+    </li>
+
   </ul>
   <hr />
 
@@ -915,7 +1875,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>上传多媒体文件，分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.uploadNews(news, callback);
+  <p>上传多媒体文件，分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.uploadNews(news, callback);
 </code></pre><p>News:</p><pre><code>{
  &quot;articles&quot;: [
    {
@@ -982,7 +1942,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>将通过上传下载多媒体文件得到的视频media_id变成视频素材<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.uploadMPVideo(opts, callback);
+  <p>将通过上传下载多媒体文件得到的视频media_id变成视频素材<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.uploadMPVideo(opts, callback);
 </code></pre><p>Opts:</p><pre><code>{
  &quot;media_id&quot;: &quot;rF4UdIMfYK3efUfyoddYRMU50zMiRmmt_l0kszupYh_SzrcW5Gaheq05p_lHuOTQ&quot;,
  &quot;title&quot;: &quot;TITLE&quot;,
@@ -1032,7 +1992,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>群发消息，分别有图文（news）、文本(text)、语音（voice）、图片（image）和视频（video）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.massSend(opts, receivers, callback);
+  <p>群发消息，分别有图文（news）、文本(text)、语音（voice）、图片（image）和视频（video）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSend(opts, receivers, callback);
 </code></pre><p>opts:</p><pre><code>{
  &quot;image&quot;:{
    &quot;media_id&quot;:&quot;123dsdajkasd231jhksad&quot;
@@ -1090,7 +2050,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>群发图文（news）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.massSendNews(mediaId, receivers, callback);
+  <p>群发图文（news）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendNews(mediaId, receivers, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -1142,7 +2102,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>群发文字（text）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.massSendText(content, receivers, callback);
+  <p>群发文字（text）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendText(content, receivers, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -1194,7 +2154,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>群发声音（voice）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.massSendVoice(media_id, receivers, callback);
+  <p>群发声音（voice）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendVoice(media_id, receivers, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -1246,7 +2206,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>群发图片（image）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.massSendImage(media_id, receivers, callback);
+  <p>群发图片（image）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendImage(media_id, receivers, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -1298,7 +2258,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>群发视频（video）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.massSendVideo(mediaId, receivers, callback);
+  <p>群发视频（video）消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendVideo(mediaId, receivers, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -1350,7 +2310,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>群发视频（video）消息，直接通过上传文件得到的media id进行群发（自动生成素材）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.massSendMPVideo(data, receivers, callback);
+  <p>群发视频（video）消息，直接通过上传文件得到的media id进行群发（自动生成素材）<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.massSendMPVideo(data, receivers, callback);
 </code></pre><p>Data:</p><pre><code>{
  &quot;media_id&quot;: &quot;rF4UdIMfYK3efUfyoddYRMU50zMiRmmt_l0kszupYh_SzrcW5Gaheq05p_lHuOTQ&quot;,
  &quot;title&quot;: &quot;TITLE&quot;,
@@ -1407,7 +2367,7 @@ API.mixin(require(&#39;./lib/api_media&#39;));
   </h3>
   
 
-  <p>删除群发消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口">http://mp.weixin.qq.com/wiki/index.php?title=高级群发接口</a><br />Examples:</p><pre><code>api.deleteMass(message_id, callback);
+  <p>删除群发消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.deleteMass(message_id, callback);
 </code></pre><p>Callback:</p><ul>
 <li><code>err</code>, 调用失败时得到的异常</li>
 <li><code>result</code>, 调用正常时得到的对象</li>
@@ -1432,6 +2392,310 @@ API.mixin(require(&#39;./lib/api_media&#39;));
       <td>参数</td>
       <td>messageId(String)</td>
       <td colspan="2">待删除群发的消息id</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_mass_send_exports_previewNews">
+    previewNews
+  </h3>
+  
+
+  <p>预览接口，预览图文消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewNews(openid, mediaId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;:0,
+ &quot;errmsg&quot;:&quot;send job submission success&quot;,
+ &quot;msg_id&quot;: 34182
+}
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.previewNews()</td> 
+      <td>exports</td>
+      <td>previewNews</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2">用户openid</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2">图文消息mediaId</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_mass_send_exports_previewText">
+    previewText
+  </h3>
+  
+
+  <p>预览接口，预览文本消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewText(openid, content, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;:0,
+ &quot;errmsg&quot;:&quot;send job submission success&quot;,
+ &quot;msg_id&quot;: 34182
+}
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.previewText()</td> 
+      <td>exports</td>
+      <td>previewText</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2">用户openid</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>content(String)</td>
+      <td colspan="2">文本消息</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_mass_send_exports_previewVoice">
+    previewVoice
+  </h3>
+  
+
+  <p>预览接口，预览语音消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewVoice(openid, mediaId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;:0,
+ &quot;errmsg&quot;:&quot;send job submission success&quot;,
+ &quot;msg_id&quot;: 34182
+}
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.previewVoice()</td> 
+      <td>exports</td>
+      <td>previewVoice</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2">用户openid</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2">语音mediaId</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_mass_send_exports_previewImage">
+    previewImage
+  </h3>
+  
+
+  <p>预览接口，预览图片消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewImage(openid, mediaId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;:0,
+ &quot;errmsg&quot;:&quot;send job submission success&quot;,
+ &quot;msg_id&quot;: 34182
+}
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.previewImage()</td> 
+      <td>exports</td>
+      <td>previewImage</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2">用户openid</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2">图片mediaId</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_mass_send_exports_previewVideo">
+    previewVideo
+  </h3>
+  
+
+  <p>预览接口，预览视频消息<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.previewVideo(openid, mediaId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;errcode&quot;:0,
+ &quot;errmsg&quot;:&quot;send job submission success&quot;,
+ &quot;msg_id&quot;: 34182
+}
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.previewVideo()</td> 
+      <td>exports</td>
+      <td>previewVideo</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>openid(String)</td>
+      <td colspan="2">用户openid</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>mediaId(String)</td>
+      <td colspan="2">视频mediaId</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>callback(Function)</td>
+      <td colspan="2">回调函数</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_mass_send_exports_getMassMessageStatus">
+    getMassMessageStatus
+  </h3>
+  
+
+  <p>查询群发消息状态<br />详情请见：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a><br />Examples:</p><pre><code>api.getMassMessageStatus(messageId, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+<p>Result:</p><pre><code>{
+ &quot;msg_id&quot;:201053012,
+ &quot;msg_status&quot;:&quot;SEND_SUCCESS&quot;
+}
+</code></pre>
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.getMassMessageStatus()</td> 
+      <td>exports</td>
+      <td>getMassMessageStatus</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>messageId(String)</td>
+      <td colspan="2">消息ID</td>
     </tr>
   
 
@@ -2358,8 +3622,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
     <tr>
       <td>返回</td>
       <td>String</td>
-      <td colspan="2">显示二维码的URL地址，通过img标签可以显示出来</td>
-    </tr>
+      <td colspan="2"><pre>显示二维码的URL地址，通过img标签可以显示出来</pre></td> </tr>
   
 
   
@@ -2898,35 +4161,7 @@ api.sendNews(&#39;openid&#39;, articles, callback);
     </li>
 
     <li>
-      <a href="#api_shop_goods_exports_deleteGoods">deleteGoods</a>
-    </li>
-
-    <li>
-      <a href="#api_shop_goods_exports_updateGoods">updateGoods</a>
-    </li>
-
-    <li>
       <a href="#api_shop_goods_exports_getGoods">getGoods</a>
-    </li>
-
-    <li>
-      <a href="#api_shop_goods_exports_getGoodsByStatus">getGoodsByStatus</a>
-    </li>
-
-    <li>
-      <a href="#api_shop_goods_exports_updateGoodsStatus">updateGoodsStatus</a>
-    </li>
-
-    <li>
-      <a href="#api_shop_goods_exports_getSubCats">getSubCats</a>
-    </li>
-
-    <li>
-      <a href="#api_shop_goods_exports_getSKUs">getSKUs</a>
-    </li>
-
-    <li>
-      <a href="#api_shop_goods_exports_getProperties">getProperties</a>
     </li>
 
   </ul>
@@ -3046,163 +4281,6 @@ api.sendNews(&#39;openid&#39;, articles, callback);
   </table>
   
   
-  <h3 data-id="api_shop_goods_exports_deleteGoods">
-    deleteGoods
-  </h3>
-  
-
-  <p>删除商品<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.deleteGoods(productId, callback);
-</code></pre><p>Callback:</p><ul>
-<li><code>err</code>, 调用失败时得到的异常</li>
-<li><code>result</code>, 调用正常时得到的对象</li>
-</ul>
-<p>Result:</p><pre><code>{
- &quot;errcode&quot;: 0,
- &quot;errmsg&quot;: &quot;success&quot;,
-}
-</code></pre>
-
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-    <tr>
-      <td>方法</td>
-      <td>exports.deleteGoods()</td> 
-      <td>exports</td>
-      <td>deleteGoods</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>productId(String)</td>
-      <td colspan="2">商品Id</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
-    </tr>
-  
-
-  
-  </table>
-  
-  
-  <h3 data-id="api_shop_goods_exports_updateGoods">
-    updateGoods
-  </h3>
-  
-
-  <p>修改商品<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.updateGoods(goods, callback);
-</code></pre><p>Goods:</p><pre><code>{
- &quot;product_id&quot;:&quot;pDF3iY6Kr_BV_CXaiYysoGqJhppQ&quot;,
- &quot;product_base&quot;:{
-   &quot;category_id&quot;:[
-     &quot;537074298&quot;
-   ],
-   &quot;property&quot;:[
-     {&quot;id&quot;:&quot;1075741879&quot;,&quot;vid&quot;:&quot;1079749967&quot;},
-     {&quot;id&quot;:&quot;1075754127&quot;,&quot;vid&quot;:&quot;1079795198&quot;},
-     {&quot;id&quot;:&quot;1075777334&quot;,&quot;vid&quot;:&quot;1079837440&quot;}
-   ],
-   &quot;name&quot;:&quot;testaddproduct&quot;,
-   &quot;sku_info&quot;:[
-     {
-       &quot;id&quot;:&quot;1075741873&quot;,
-       &quot;vid&quot;:[&quot;1079742386&quot;,&quot;1079742363&quot;]
-     }
-   ],
-   &quot;main_img&quot;: &quot;http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2iccsvYbHvnphkyGtnvjD3ulEKogfsiaua49pvLfUS8Ym0GSYjViaLic0FD3vN0V8PILcibEGb2fPfEOmw/0&quot;,
-   &quot;img&quot;:[
-     &quot;http://mmbiz.qpic.cn/mmbiz/4whpV1VZl2iccsvYbHvnphkyGtnvjD3ulEKogfsiaua49pvLfUS8Ym0GSYjViaLic0FD3vN0V8PILcibEGb2fPfEOmw/0&quot;
-   ],
-   &quot;detail&quot;:[
-     {&quot;text&quot;:&quot;testfirst&quot;},
-     {&quot;img&quot;: 4whpV1VZl2iccsvYbHvnphkyGtnvjD3ul1UcLcwxrFdwTKYhH9Q5YZoCfX4Ncx655ZK6ibnlibCCErbKQtReySaVA/0&quot;},
-     {&quot;text&quot;:&quot;testagain&quot;}
-   ],
-   &quot;buy_limit&quot;:10
- },
- &quot;sku_list&quot;:[
-   {
-     &quot;sku_id&quot;:&quot;1075741873:1079742386&quot;,
-     &quot;price&quot;:30,
-     &quot;icon_url&quot;: &quot;http://mmbiz.qpic.cn/mmbiz/4whpV1VZl28bJj62XgfHPibY3ORKicN1oJ4CcoIr4BMbfA8LqyyjzOZzqrOGz3f5K Wq1QGP3fo6TOTSYD3TBQjuw/0&quot;,
-     &quot;product_code&quot;:&quot;testing&quot;,
-     &quot;ori_price&quot;:9000000,
-     &quot;quantity&quot;:800
-   },
-   {
-     &quot;sku_id&quot;:&quot;1075741873:1079742363&quot;,
-     &quot;price&quot;:30,
-     &quot;icon_url&quot;: &quot;http://mmbiz.qpic.cn/mmbiz/4whpV1VZl28bJj62XgfHPibY3ORKicN1oJ4CcoIr4BMbfA8LqyyjzOZzqrOGz3f5K Wq1QGP3fo6TOTSYD3TBQjuw/0&quot;,
-     &quot;product_code&quot;:&quot;testingtesting&quot;,
-     &quot;ori_price&quot;:9000000,
-     &quot;quantity&quot;:800
-   }
- ],
- &quot;attrext&quot;:{
-   &quot;location&quot;:{
-     &quot;country&quot;:&quot;中国&quot;,
-     &quot;province&quot;:&quot;广东省&quot;,
-     &quot;city&quot;:&quot;广州市&quot;,
-     &quot;address&quot;:&quot;T.I.T创意园&quot;
-   },
-   &quot;isPostFree&quot;:0,
-   &quot;isHasReceipt&quot;:1,
-   &quot;isUnderGuaranty&quot;:0,
-   &quot;isSupportReplace&quot;:0
- },
- &quot;delivery_info&quot;:{
-   &quot;delivery_type&quot;:0,
-   &quot;template_id&quot;:0,
-   &quot;express&quot;:[
-     {&quot;id&quot;:10000027,&quot;price&quot;:100},
-     {&quot;id&quot;:10000028,&quot;price&quot;:100},
-     {&quot;id&quot;:10000029,&quot;price&quot;:100}
-   ]
- }
-}
-</code></pre><p>Callback:</p><ul>
-<li><code>err</code>, 调用失败时得到的异常</li>
-<li><code>result</code>, 调用正常时得到的对象</li>
-</ul>
-<p>Result:</p><pre><code>{
- &quot;errcode&quot;: 0,
- &quot;errmsg&quot;: &quot;success&quot;
-}
-</code></pre>
-
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-    <tr>
-      <td>方法</td>
-      <td>exports.updateGoods()</td> 
-      <td>exports</td>
-      <td>updateGoods</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>goods(Object)</td>
-      <td colspan="2">商品信息</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
-    </tr>
-  
-
-  
-  </table>
-  
-  
   <h3 data-id="api_shop_goods_exports_getGoods">
     getGoods
   </h3>
@@ -3294,275 +4372,6 @@ api.sendNews(&#39;openid&#39;, articles, callback);
       <td>参数</td>
       <td>productId(String)</td>
       <td colspan="2">商品Id</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
-    </tr>
-  
-
-  
-  </table>
-  
-  
-  <h3 data-id="api_shop_goods_exports_getGoodsByStatus">
-    getGoodsByStatus
-  </h3>
-  
-
-  <p>获取指定状态的所有商品<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.deleteGoods(productId, callback);
-</code></pre><p>Callback:</p><ul>
-<li><code>err</code>, 调用失败时得到的异常</li>
-<li><code>result</code>, 调用正常时得到的对象</li>
-</ul>
-<p>Result:</p><pre><code>{
- &quot;errcode&quot;: 0,
- &quot;errmsg&quot;: &quot;success&quot;,
- &quot;products_info&quot;: [
-   {
-     &quot;product_base&quot;: ...,
-     &quot;sku_list&quot;: ...,
-     &quot;attrext&quot;: ...,
-     &quot;delivery_info&quot;: ...,
-     &quot;product_id&quot;: &quot;pDF3iY-mql6CncpbVajaB_obC321&quot;,
-     &quot;status&quot;: 1
-   }
- ]
-}
-</code></pre>
-
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-    <tr>
-      <td>方法</td>
-      <td>exports.getGoodsByStatus()</td> 
-      <td>exports</td>
-      <td>getGoodsByStatus</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>status(Number)</td>
-      <td colspan="2">状态码。(0-全部, 1-上架, 2-下架)</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
-    </tr>
-  
-
-  
-  </table>
-  
-  
-  <h3 data-id="api_shop_goods_exports_updateGoodsStatus">
-    updateGoodsStatus
-  </h3>
-  
-
-  <p>商品上下架<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.updateGoodsStatus(productId, status, callback);
-</code></pre><p>Callback:</p><ul>
-<li><code>err</code>, 调用失败时得到的异常</li>
-<li><code>result</code>, 调用正常时得到的对象</li>
-</ul>
-<p>Result:</p><pre><code>{
- &quot;errcode&quot;: 0,
- &quot;errmsg&quot;: &quot;success&quot;
-}
-</code></pre>
-
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-    <tr>
-      <td>方法</td>
-      <td>exports.updateGoodsStatus()</td> 
-      <td>exports</td>
-      <td>updateGoodsStatus</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>productId(String)</td>
-      <td colspan="2">商品Id</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>status(Number)</td>
-      <td colspan="2">状态码。(0-全部, 1-上架, 2-下架)</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
-    </tr>
-  
-
-  
-  </table>
-  
-  
-  <h3 data-id="api_shop_goods_exports_getSubCats">
-    getSubCats
-  </h3>
-  
-
-  <p>获取指定分类的所有子分类<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getSubCats(catId, callback);
-</code></pre><p>Callback:</p><ul>
-<li><code>err</code>, 调用失败时得到的异常</li>
-<li><code>result</code>, 调用正常时得到的对象</li>
-</ul>
-<p>Result:</p><pre><code>{
- &quot;errcode&quot;: 0,
- &quot;errmsg&quot;: &quot;success&quot;
- &quot;cate_list&quot;: [!
-   {&quot;id&quot;: &quot;537074292&quot;,&quot;name&quot;: &quot;数码相机&quot;},
-   {&quot;id&quot;: &quot;537074293&quot;,&quot;name&quot;: &quot;家⽤用摄像机&quot;},
-   {&quot;id&quot;: &quot;537074298&quot;,! &quot;name&quot;: &quot;单反相机&quot;}
- ]
-}
-</code></pre>
-
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-    <tr>
-      <td>方法</td>
-      <td>exports.getSubCats()</td> 
-      <td>exports</td>
-      <td>getSubCats</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>catId(Number)</td>
-      <td colspan="2">大分类ID</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
-    </tr>
-  
-
-  
-  </table>
-  
-  
-  <h3 data-id="api_shop_goods_exports_getSKUs">
-    getSKUs
-  </h3>
-  
-
-  <p>获取指定子分类的所有SKU<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getSKUs(catId, callback);
-</code></pre><p>Callback:</p><ul>
-<li><code>err</code>, 调用失败时得到的异常</li>
-<li><code>result</code>, 调用正常时得到的对象</li>
-</ul>
-<p>Result:</p><pre><code>{
- &quot;errcode&quot;: 0,
- &quot;errmsg&quot;: &quot;success&quot;
- &quot;sku_table&quot;: [
-   {
-     &quot;id&quot;: &quot;1075741873&quot;,
-     &quot;name&quot;: &quot;颜⾊色&quot;,
-     &quot;value_list&quot;: [
-       {&quot;id&quot;: &quot;1079742375&quot;, &quot;name&quot;: &quot;撞⾊色&quot;},
-       {&quot;id&quot;: &quot;1079742376&quot;,&quot;name&quot;: &quot;桔⾊色&quot;}
-     ]
-   }
- ]
-}
-</code></pre>
-
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-    <tr>
-      <td>方法</td>
-      <td>exports.getSKUs()</td> 
-      <td>exports</td>
-      <td>getSKUs</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>catId(Number)</td>
-      <td colspan="2">大分类ID</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>callback(Function)</td>
-      <td colspan="2">回调函数</td>
-    </tr>
-  
-
-  
-  </table>
-  
-  
-  <h3 data-id="api_shop_goods_exports_getProperties">
-    getProperties
-  </h3>
-  
-
-  <p>获取指定分类的所有属性<br />详细请看：<a href="http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口">http://mp.weixin.qq.com/wiki/index.php?title=微信小店接口</a><br />Examples:</p><pre><code>api.getProperties(catId, callback);
-</code></pre><p>Callback:</p><ul>
-<li><code>err</code>, 调用失败时得到的异常</li>
-<li><code>result</code>, 调用正常时得到的对象</li>
-</ul>
-<p>Result:</p><pre><code>{
- &quot;errcode&quot;: 0,
- &quot;errmsg&quot;: &quot;success&quot;
- &quot;properties&quot;: [
-   {
-     &quot;id&quot;: &quot;1075741879&quot;,
-     &quot;name&quot;: &quot;品牌&quot;,
-     &quot;property_value&quot;: [
-       {&quot;id&quot;: &quot;200050867&quot;,&quot;name&quot;: &quot;VIC&amp;#38&quot;},
-       {&quot;id&quot;: &quot;200050868&quot;,&quot;name&quot;: &quot;Kate&amp;#38&quot;},
-       {&quot;id&quot;: &quot;200050971&quot;,&quot;name&quot;: &quot;M&amp;#38&quot;},
-       {&quot;id&quot;: &quot;200050972&quot;,&quot;name&quot;: &quot;Black&amp;#38&quot;}
-     ]
-   },
-   {
-     &quot;id&quot;: &quot;123456789&quot;,
-     &quot;name&quot;: &quot;颜⾊色&quot;,
-     &quot;property_value&quot;: ...
-   }
- ]
-}
-</code></pre>
-
-  <table class="table table-striped table-bordered table-hover table-condensed">
-  
-    <tr>
-      <td>方法</td>
-      <td>exports.getProperties()</td> 
-      <td>exports</td>
-      <td>getProperties</td>
-    </tr>
-  
-
-    <tr>
-      <td>参数</td>
-      <td>catId(Number)</td>
-      <td colspan="2">分类ID</td>
     </tr>
   
 
@@ -4683,12 +5492,91 @@ api.updateStock(-10, productId, sku, callback); // 减少10件库存
   <ul class="indexs">
   
     <li>
+      <a href="#api_template_exports_setIndustry">setIndustry</a>
+    </li>
+
+    <li>
+      <a href="#api_template_exports_addTemplate">addTemplate</a>
+    </li>
+
+    <li>
       <a href="#api_template_exports_sendTemplate">sendTemplate</a>
     </li>
 
   </ul>
   <hr />
 
+  
+  <h3 data-id="api_template_exports_setIndustry">
+    setIndustry
+  </h3>
+  
+
+  <p>设置所属行业<br />Examples:</p><pre><code>var industryIds = {
+ &quot;industry_id1&quot;:&#39;1&#39;,
+ &quot;industry_id2&quot;:&quot;4&quot;
+};
+api.setIndustry(industryIds, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.setIndustry()</td> 
+      <td>exports</td>
+      <td>setIndustry</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>industryIds(Object)</td>
+      <td colspan="2">公众号模板消息所属行业编号</td>
+    </tr>
+  
+
+  
+  </table>
+  
+  
+  <h3 data-id="api_template_exports_addTemplate">
+    addTemplate
+  </h3>
+  
+
+  <p>获得模板ID<br />Examples:</p><pre><code>var templateIdShort = &#39;TM00015&#39;;
+api.addTemplate(templateIdShort, callback);
+</code></pre><p>Callback:</p><ul>
+<li><code>err</code>, 调用失败时得到的异常</li>
+<li><code>result</code>, 调用正常时得到的对象</li>
+</ul>
+
+
+  <table class="table table-striped table-bordered table-hover table-condensed">
+  
+    <tr>
+      <td>方法</td>
+      <td>exports.addTemplate()</td> 
+      <td>exports</td>
+      <td>addTemplate</td>
+    </tr>
+  
+
+    <tr>
+      <td>参数</td>
+      <td>templateIdShort(String)</td>
+      <td colspan="2">模板库中模板的编号，有“TM**”和“OPENTMTM**”等形式</td>
+    </tr>
+  
+
+  
+  </table>
+  
   
   <h3 data-id="api_template_exports_sendTemplate">
     sendTemplate
