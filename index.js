@@ -41,5 +41,7 @@ API.mixin(require('./lib/api_url'));
 API.mixin(require('./lib/api_semantic'));
 // 获取微信服务器IP地址
 API.mixin(require('./lib/api_ip'));
+// 图文消息数据分析接口
+API.mixin(require('./lib/api_datacube'));
 
 module.exports = API;
