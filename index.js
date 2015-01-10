@@ -43,5 +43,7 @@ API.mixin(require('./lib/api_semantic'));
 API.mixin(require('./lib/api_ip'));
 // 图文消息数据分析接口
 API.mixin(require('./lib/api_datacube'));
+// js sdk接口
+API.mixin(require('./lib/api_js'));
 
 module.exports = API;
