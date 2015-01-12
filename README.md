@@ -26,7 +26,7 @@ Wechat API
 - 数据分析
 - JSSDK服务端支持
 
-详细参见[API文档](http://doxmate.cool/wechat-api/api.html)
+详细参见[API文档](http://doxmate.cool/node-webot/wechat-api/api.html)
 
 企业版本请前往：<https://github.com/node-webot/wechat-enterprise>
 
