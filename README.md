@@ -23,8 +23,10 @@ Wechat API
 - 模版消息
 - 网址缩短
 - 语义查询
+- 数据分析
+- JSSDK服务端支持
 
-详细参见[API文档](http://node-webot.github.io/wechat-api/api.html)
+详细参见[API文档](http://doxmate.cool/wechat-api/api.html)
 
 企业版本请前往：<https://github.com/node-webot/wechat-enterprise>
 
