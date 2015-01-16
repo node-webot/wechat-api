@@ -45,5 +45,8 @@ API.mixin(require('./lib/api_ip'));
 API.mixin(require('./lib/api_datacube'));
 // js sdk接口
 API.mixin(require('./lib/api_js'));
-
+// 卡券接口
+API.mixin(require('./lib/api_card'));
+// 设备接口
+API.mixin(require('./lib/api_device'));
 module.exports = API;
