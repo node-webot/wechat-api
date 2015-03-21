@@ -9,6 +9,8 @@ API.mixin(require('./lib/api_user'));
 API.mixin(require('./lib/api_qrcode'));
 // 媒体管理（上传、下载）
 API.mixin(require('./lib/api_media'));
+// 永久素材管理接口
+API.mixin(require('./lib/api_material'));
 // 客服消息
 API.mixin(require('./lib/api_message'));
 // 模板消息
