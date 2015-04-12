@@ -51,4 +51,6 @@ API.mixin(require('./lib/api_js'));
 API.mixin(require('./lib/api_card'));
 // 设备接口
 API.mixin(require('./lib/api_device'));
+// 摇一摇周边接口
+API.mixin(require('./lib/api_shakearound'));
 module.exports = API;
