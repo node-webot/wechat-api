@@ -25,6 +25,8 @@ Wechat API
 - 语义查询
 - 数据分析
 - JSSDK服务端支持
+- 素材管理
+- 摇一摇周边
 
 详细参见[API文档](http://doxmate.cool/node-webot/wechat-api/api.html)
 
