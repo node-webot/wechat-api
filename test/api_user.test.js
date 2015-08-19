@@ -16,7 +16,7 @@ describe('api_user', function () {
         expect(err).not.to.be.ok();
         expect(data).to.only.have.keys('subscribe', 'openid', 'nickname',
           'sex', 'language', 'city', 'province', 'country', 'headimgurl',
-          'subscribe_time', 'remark');
+          'subscribe_time', 'remark', 'groupid');
         done();
       });
     });
@@ -46,6 +46,16 @@ describe('api_user', function () {
       expect(err).not.to.be.ok();
       expect(data).to.have.key('next_openid');
       done();
+    });
+  });
+  
+  describe('batchGetUser', function() {
+    it('should ok', function(done) {
+      api.batchGetUsers([puling], function (err, data, res) {
+        expect(err).not.to.be.ok();
+        expect(data).to.only.have.keys('user_info_list');
+        done();
+      })
     });
   });
 });
