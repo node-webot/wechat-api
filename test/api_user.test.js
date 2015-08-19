@@ -48,4 +48,14 @@ describe('api_user', function () {
       done();
     });
   });
+  
+  describe('batchGetUser', function() {
+    it('should ok', function(done) {
+      api.batchGetUsers([puling], function (err, data, res) {
+        expect(err).not.to.be.ok();
+        expect(data).to.only.have.keys('user_info_list');
+        done();
+      })
+    });
+  });
 });
