@@ -16,7 +16,7 @@ describe('api_user', function () {
         expect(err).not.to.be.ok();
         expect(data).to.only.have.keys('subscribe', 'openid', 'nickname',
           'sex', 'language', 'city', 'province', 'country', 'headimgurl',
-          'subscribe_time', 'remark');
+          'subscribe_time', 'remark', 'groupid');
         done();
       });
     });
