@@ -8,6 +8,7 @@ var imageId = 'XDZxzuRWBPqI4R9n_nNR5uRVZVQCSneMoELyWKflwM2qF9K38vnVFzgaD97uCTUu'
 var voiceId = '9R5BhAum7AEaGhwku0WhgvtO4C_7Xs78NoiRvm6v7IyoTljE4HH5o8E_UfnPrL0p';
 var thumbId = 'BHxGDVy7WY6BCOcv3AwbywUE630Vw0tAV_V8bzBaCZid4Km5fwXrVOso3X0zas4n';
 var movieId = 'b4F8SfaZZQwalDxwPjd923ACV5IUeYvZ9-dYKf5ytXrS-IImXEkl2U8Fl5EH-jCF';
+var cardId = 'pAtUNs-HV0evhGTWbU3ohp99tW7k';
 
 describe('api_customer', function () {
   var api = new API(config.appid, config.appsecret);
@@ -230,6 +231,28 @@ describe('api_customer', function () {
           expect(err.message).to.be('mock error');
           done();
         });
+      });
+    });
+  });
+  
+  describe.skip('sendCard', function() {
+    var card = {
+      // code:'12345', //option
+      // openid: puling, //option
+      card_id: cardId
+    }
+    it('sendCard should ok', function(done) {
+      api.sendCard(puling, card, function (err, data, res) {
+        if (!err) {
+          expect(err).not.to.be.ok();
+          expect(data).to.have.property('errcode', 0);
+          expect(data).to.have.property('errmsg', 'ok');
+        } else {
+          expect(err).to.be.ok();
+          expect(err).to.have.property('name', 'WeChatAPIError');
+          expect(err).to.have.property('message');
+        }
+        done();
       });
     });
   });
