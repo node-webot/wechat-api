@@ -91,30 +91,33 @@ QQ群：157964097，使用疑问，开发，贡献代码请加群。
 
 ```
 
- project  : wechat
- repo age : 1 year, 8 months
- active   : 106 days
- commits  : 244
- files    : 60
+ project  : wechat-api
+ repo age : 11 months
+ active   : 59 days
+ commits  : 134
+ files    : 69
  authors  :
-   206  Jackson Tian            84.4%
-    10  yelo                    4.1%
-     4  realdog                 1.6%
-     4  Bruce Lee               1.6%
-     3  Guo Yu                  1.2%
-     2  zhongao                 0.8%
-     2  Jesse Yang              0.8%
-     2  Lu Jun                  0.8%
-     2  dan                     0.8%
-     1  TooBug                  0.4%
-     1  feichang.wyl            0.4%
-     1  feit                    0.4%
-     1  ifeiteng                0.4%
-     1  p13766                  0.4%
-     1  Rogerz Zhang            0.4%
-     1  xianda                  0.4%
-     1  Lance Li                0.4%
-     1  Chen Wei                0.4%
+    95  Jackson Tian  70.9%
+     9  tedyyu        6.7%
+     5  Guan Bo       3.7%
+     4  Lou            Lin   3.0%
+     3  minxianlong   2.2%
+     2  xuming314     1.5%
+     2  Colt Xie      1.5%
+     1  ifeiteng      0.7%
+     1  liuxiaodong   0.7%
+     1  looping       0.7%
+     1  shuhankuang   0.7%
+     1  wuxq          0.7%
+     1  wxhuang       0.7%
+     1  xumian.wei    0.7%
+     1  yelo          0.7%
+     1  Ezios         0.7%
+     1  Lin@Cloud+    0.7%
+     1  Qun Lin       0.7%
+     1  Will          0.7%
+     1  brucewar      0.7%
+     1  dan           0.7%
 
 ```
 
