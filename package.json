@@ -6,7 +6,7 @@
   "scripts": {
     "test": "make test-all"
   },
-  "config":{
+  "config": {
     "travis-cov": {
       "threshold": 98
     }
@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "formstream": ">=0.0.8",
-    "urllib": "2.0.2"
+    "urllib": "2.5.0"
   },
   "devDependencies": {
     "mocha": "*",
