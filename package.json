@@ -30,7 +30,7 @@
     "coveralls": "*",
     "mocha-lcov-reporter": "*",
     "muk": "*",
-    "rewire": "*",
+    "rewire": "2.5.0",
     "istanbul": "*"
   },
   "author": "Jackson Tian",
