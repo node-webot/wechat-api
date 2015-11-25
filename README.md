@@ -43,7 +43,7 @@ $ npm install wechat-api
 ```js
 var WechatAPI = require('wechat-api');
 
-var api = new WechatAPI(appid, appsecret, );
+var api = new WechatAPI(appid, appsecret);
 api.updateRemark('open_id', 'remarked', function (err, data, res) {
   // TODO
 });
