@@ -47,7 +47,7 @@ describe('api_template', function () {
         } else {
           expect(err).to.be.ok();
           expect(err).to.have.property('name', 'WeChatAPIError');
-          expect(err).to.have.property('message', 'invalid template_id');
+          expect(err.message).to.contain('invalid template_id');
         }
         done();
       });
