@@ -28,7 +28,7 @@
     "expect.js": "*",
     "travis-cov": "*",
     "coveralls": "*",
-    "mocha-lcov-reporter": "*",
+    "mocha-lcov-reporter": "1.0.0",
     "muk": "*",
     "rewire": "*",
     "istanbul": "*"
