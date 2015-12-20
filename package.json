@@ -1,6 +1,6 @@
 {
   "name": "wechat-api",
-  "version": "1.22.0",
+  "version": "1.23.0",
   "description": "微信公共平台Node库 API",
   "main": "index.js",
   "scripts": {
