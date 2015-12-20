@@ -1,6 +1,8 @@
 var API = require('./lib/api_common');
-// 菜单接口
+// 自定义菜单接口
 API.mixin(require('./lib/api_menu'));
+// 个性化菜单接口
+API.mixin(require('./lib/api_menu_custom'));
 // 分组管理
 API.mixin(require('./lib/api_group'));
 // 用户信息
