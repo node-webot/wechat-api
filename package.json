@@ -20,7 +20,7 @@
     "wechat"
   ],
   "dependencies": {
-    "formstream": ">=0.0.8",
+    "formstream": ">=1.0.0",
     "urllib": "2.6.0"
   },
   "devDependencies": {
