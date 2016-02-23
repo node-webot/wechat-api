@@ -75,4 +75,54 @@ describe('api_template', function () {
       });
     });
   });
+
+  describe('getIndustry', function () {
+    it('getIndustry should ok', function (done) {
+      api.getIndustry(function (err, data, res) {
+        if (!err) {
+          expect(err).not.to.be.ok();
+          expect(data).to.have.property('primary_industry');
+          expect(data).to.have.property('secondary_industry');
+        } else {
+          expect(err).to.be.ok();
+          expect(err).to.have.property('name', 'WeChatAPIError');
+        }
+        done();
+      });
+    });
+  });
+
+  describe('getAllPrivateTemplate', function () {
+    it('getAllPrivateTemplate should ok', function (done) {
+      api.getAllPrivateTemplate(function (err, data, res) {
+        if (!err) {
+          expect(err).not.to.be.ok();
+          expect(data).to.have.property('template_list');
+          expect(data.template_list).to.be.an('array');
+        } else {
+          expect(err).to.be.ok();
+          expect(err).to.have.property('name', 'WeChatAPIError');
+        }
+        done();
+      });
+    });
+  });
+
+  describe('delPrivateTemplate', function () {
+    it('delPrivateTemplate should ok', function (done) {
+      var templateId = '模板id';
+      api.delPrivateTemplate(templateId, function (err, data, res) {
+        if (!err) {
+          expect(err).not.to.be.ok();
+          expect(data).to.have.property('errcode', 0);
+          expect(data).to.have.property('errmsg', 'ok');
+        } else {
+          expect(err).to.be.ok();
+          expect(err).to.have.property('name', 'WeChatAPIError');
+          expect(err.message).to.contain('invalid template_id');
+        }
+        done();
+      });
+    });
+  });
 });
