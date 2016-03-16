@@ -1,6 +1,6 @@
-Wechat API
+Open Wechat API
 ===========
-微信公共平台API。
+开放平台版微信公众号API。
 
 ## 模块状态
 - [![NPM version](https://badge.fury.io/js/wechat-api.png)](http://badge.fury.io/js/wechat)
@@ -29,13 +29,13 @@ Wechat API
 - 摇一摇周边
 
 详细参见[API文档](http://doxmate.cool/node-webot/wechat-api/api.html)
+注意：common部分的api实例创建参见下文
 
-企业版本请前往：<https://github.com/node-webot/wechat-enterprise>
 
 ## Installation
 
 ```sh
-$ npm install wechat-api
+$ npm install open-wechat-api
 ```
 
 ## Usage
@@ -51,7 +51,7 @@ api.updateRemark('open_id', 'remarked', function (err, data, res) {
 
 ### 多进程
 当多进程时，token需要全局维护，以下为保存token的接口。
-```
+```js
 var api = new API('appid', 'secret', function (callback) {
   // 传入一个获取全局token的方法
   fs.readFile('access_token.txt', 'utf8', function (err, txt) {
@@ -64,17 +64,6 @@ var api = new API('appid', 'secret', function (callback) {
   fs.writeFile('access_token.txt', JSON.stringify(token), callback);
 });
 ```
-
-## Show cases
-### Node.js API自动回复
-
-![Node.js API自动回复机器人](http://nodeapi.diveintonode.org/assets/qrcode.jpg)
-
-欢迎关注。
-
-代码：<https://github.com/JacksonTian/api-doc-service>
-
-你可以在[CloudFoundry](http://www.cloudfoundry.com/)、[appfog](https://www.appfog.com/)、[BAE](http://developer.baidu.com/wiki/index.php?title=docs/cplat/rt/node.js)等搭建自己的机器人。
 
 ## 详细API
 原始API文档请参见：[消息接口指南](http://mp.weixin.qq.com/wiki/index.php?title=消息接口指南)。
