@@ -6,7 +6,6 @@ Open Wechat API
 - [![NPM version](https://badge.fury.io/js/wechat-api.png)](http://badge.fury.io/js/wechat)
 - [![Build Status](https://travis-ci.org/node-webot/wechat-api.png?branch=master)](https://travis-ci.org/node-webot/wechat-api)
 - [![Dependencies Status](https://david-dm.org/node-webot/wechat-api.png)](https://david-dm.org/node-webot/wechat-api)
-- [![Coverage Status](https://coveralls.io/repos/node-webot/wechat-api/badge.png)](https://coveralls.io/r/node-webot/wechat-api)
 
 ## 功能列表
 - 发送客服消息（文本、图片、语音、视频、音乐、图文）
@@ -29,8 +28,8 @@ Open Wechat API
 - 摇一摇周边
 
 详细参见[API文档](http://doxmate.cool/node-webot/wechat-api/api.html)
-注意：common部分的api实例创建参见下文
 
+注意：common部分的api实例创建参见下文
 
 ## Installation
 
