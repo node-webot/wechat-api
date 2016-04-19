@@ -1,9 +1,9 @@
 Open Wechat API
 ===========
-开放平台版微信公众号API。
+开放平台版微信公众号API。该模块修改自[wechat-api](https://github.com/node-webot/wechat-api)，用于微信第三方平台调用
+微信相关接口。该模块需配合[wechat-auth](https://github.com/markaii/wechat-auth)使用
 
 ## 模块状态
-- [![NPM version](https://badge.fury.io/js/wechat-api.png)](http://badge.fury.io/js/wechat)
 - [![Build Status](https://travis-ci.org/node-webot/wechat-api.png?branch=master)](https://travis-ci.org/node-webot/wechat-api)
 - [![Dependencies Status](https://david-dm.org/node-webot/wechat-api.png)](https://david-dm.org/node-webot/wechat-api)
 
@@ -34,33 +34,22 @@ Open Wechat API
 ## Installation
 
 ```sh
-$ npm install open-wechat-api
+$ git clone https://github.com/markaii/open-wechat-api
 ```
 
 ## Usage
 
-```js
-var WechatAPI = require('wechat-api');
+创建api实例，和[wechat-api](https://github.com/node-webot/wechat-api)不同的是，
+access_token不再是通过appid和appsecret获取的，而是平台通过[wechat-auth](https://github.com/markaii/wechat-auth)获取的，
+因此创建api实例时，将外部获取到的access_token传入构造函数创建实例。
+注意：所有的接口调用和[wechat-api](https://github.com/node-webot/wechat-api)相同。
 
-var api = new WechatAPI(appid, appsecret);
+```js
+var WechatAPI = require('open-wechat-api');
+
+var api = new WechatAPI(appid, access_token);
 api.updateRemark('open_id', 'remarked', function (err, data, res) {
   // TODO
-});
-```
-
-### 多进程
-当多进程时，token需要全局维护，以下为保存token的接口。
-```js
-var api = new API('appid', 'secret', function (callback) {
-  // 传入一个获取全局token的方法
-  fs.readFile('access_token.txt', 'utf8', function (err, txt) {
-    if (err) {return callback(err);}
-    callback(null, JSON.parse(txt));
-  });
-}, function (token, callback) {
-  // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
-  // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
-  fs.writeFile('access_token.txt', JSON.stringify(token), callback);
 });
 ```
 
