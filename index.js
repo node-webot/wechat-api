@@ -5,6 +5,8 @@ API.mixin(require('./lib/api_menu'));
 API.mixin(require('./lib/api_menu_custom'));
 // 分组管理
 API.mixin(require('./lib/api_group'));
+// 标签管理
+API.mixin(require('./lib/api_tag'));
 // 用户信息
 API.mixin(require('./lib/api_user'));
 // 二维码
