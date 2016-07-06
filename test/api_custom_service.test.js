@@ -31,9 +31,8 @@ describe('api_custom_service', function () {
         var condition = {
           "starttime" : 123456789,
           "endtime" : 987654321,
-          // "openid" : "OPENID",
-          "pagesize" : 10,
-          "pageindex" : 1,
+          "number" : 10000,
+          "msgid"  : 1
         };
 
         api.getRecords(condition, function (err, data, res) {
