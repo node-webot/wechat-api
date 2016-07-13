@@ -52,7 +52,8 @@ api.updateRemark('open_id', 'remarked', function (err, data, res) {
 ### 多进程
 当多进程时，token需要全局维护，以下为保存token的接口。
 ```
-var api = new API('appid', 'secret', function (callback) {
+var WechatAPI = require('wechat-api');
+var api = new WechatAPI('appid', 'secret', function (callback) {
   // 传入一个获取全局token的方法
   fs.readFile('access_token.txt', 'utf8', function (err, txt) {
     if (err) {return callback(err);}
