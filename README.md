@@ -42,12 +42,13 @@ $ git clone https://github.com/markaii/open-wechat-api
 创建api实例，和[wechat-api](https://github.com/node-webot/wechat-api)不同的是，
 access_token不再是通过appid和appsecret获取的，而是平台通过[wechat-auth](https://github.com/markaii/wechat-auth)获取的，
 因此创建api实例时，将外部获取到的access_token传入构造函数创建实例。
+
 注意：所有的接口调用和[wechat-api](https://github.com/node-webot/wechat-api)相同。
 
 ```js
 var WechatAPI = require('open-wechat-api');
 
-var api = new WechatAPI(appid, access_token);
+var api = new WechatAPI(appid, access_token); // access_token = { authorizer_access_token: "xxx", expires_at: "xxx"}
 api.updateRemark('open_id', 'remarked', function (err, data, res) {
   // TODO
 });
