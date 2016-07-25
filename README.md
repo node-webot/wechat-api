@@ -56,7 +56,7 @@ var WechatAPI = require('wechat-api');
 var api = new WechatAPI('appid', 'secret', function (callback) {
   // 传入一个获取全局token的方法
   fs.readFile('access_token.txt', 'utf8', function (err, txt) {
-    if (err) {return callback(err);}
+    if (err) {return callback(null);}
     callback(null, JSON.parse(txt));
   });
 }, function (token, callback) {
