@@ -24,7 +24,7 @@
     "urllib": "2.11.0"
   },
   "devDependencies": {
-    "mocha": "*",
+    "mocha": "3.0.1",
     "expect.js": "*",
     "travis-cov": "*",
     "coveralls": "*",
