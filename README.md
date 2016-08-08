@@ -93,32 +93,45 @@ QQ群：157964097，使用疑问，开发，贡献代码请加群。
 ```
 
  project  : wechat-api
- repo age : 12 months
- active   : 61 days
- commits  : 141
- files    : 69
+ repo age : 1 year, 9 months
+ active   : 97 days
+ commits  : 211
+ files    : 72
  authors  :
-    99  Jackson Tian  70.2%
-     9  tedyyu        6.4%
-     5  Guan Bo       3.5%
-     4  shuhankuang   2.8%
-     4  Lou            Lin   2.8%
-     3  minxianlong   2.1%
-     2  xuming314     1.4%
-     2  Colt Xie      1.4%
-     1  liuxiaodong   0.7%
-     1  looping       0.7%
-     1  wuxq          0.7%
-     1  wxhuang       0.7%
-     1  xumian.wei    0.7%
-     1  yelo          0.7%
-     1  Ezios         0.7%
-     1  Lin@Cloud+    0.7%
-     1  Qun Lin       0.7%
-     1  Will          0.7%
-     1  brucewar      0.7%
-     1  dan           0.7%
-     1  ifeiteng      0.7%
+   136  Jackson Tian       64.5%
+    10  tedyyu             4.7%
+     9  greenkeeperio-bot  4.3%
+     7  Limjoe             3.3%
+     6  Guan Bo            2.8%
+     5  SunLn              2.4%
+     4  shuhankuang        1.9%
+     4  Lou                 Lin   1.9%
+     3  minxianlong        1.4%
+     2  Colt Xie           0.9%
+     2  xuming314          0.9%
+     1  brucewar           0.5%
+     1  dan                0.5%
+     1  ifeiteng           0.5%
+     1  kai_hao            0.5%
+     1  liuxiaodong        0.5%
+     1  looping            0.5%
+     1  simonyan           0.5%
+     1  wuxq               0.5%
+     1  wxhuang            0.5%
+     1  xumian.wei         0.5%
+     1  yelo               0.5%
+     1  BeeSui             0.5%
+     1  yuyuan             0.5%
+     1  Eric               0.5%
+     1  Ezios              0.5%
+     1  JaydanHuang        0.5%
+     1  Lin@Cloud+         0.5%
+     1  Monson Shao        0.5%
+     1  Qun Lin            0.5%
+     1  Silver Lao         0.5%
+     1  Table              0.5%
+     1  Wang Yitong        0.5%
+     1  Will               0.5%
 
 ```
 
