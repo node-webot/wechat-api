@@ -5,6 +5,9 @@ ISTANBUL = ./node_modules/.bin/istanbul
 MOCHA = ./node_modules/mocha/bin/_mocha
 COVERALLS = ./node_modules/coveralls/bin/coveralls.js
 
+lint:
+	@eslint --fix lib index.js
+
 test:
 	@NODE_ENV=test $(MOCHA) -R $(REPORTER) -t $(TIMEOUT) \
 		$(MOCHA_OPTS) \
