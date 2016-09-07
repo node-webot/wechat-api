@@ -5,6 +5,8 @@ ISTANBUL = ./node_modules/.bin/istanbul
 MOCHA = ./node_modules/mocha/bin/_mocha
 COVERALLS = ./node_modules/coveralls/bin/coveralls.js
 
+all:test
+  
 lint:
 	@eslint --fix lib index.js
 
