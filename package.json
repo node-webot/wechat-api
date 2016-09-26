@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "formstream": ">=1.0.0",
-    "urllib": "2.11.0"
+    "urllib": "2.15.1"
   },
   "devDependencies": {
     "mocha": "*",
