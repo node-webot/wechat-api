@@ -49,6 +49,35 @@ api.updateRemark('open_id', 'remarked', function (err, data, res) {
 });
 ```
 
+### patch()扩展
+
+当微信官方文档已更新，但本库未来得及更新，而又想用新的微信 api 时，可调用 patch 方法来扩展新功能。
+```js
+var WechatAPI = require('wechat-api');
+var api = new WechatAPI(appid, appsecret);
+
+// 扩展新api : updateInfo
+// 第一个参数为扩展的新方法名，第二个参数为此 api 调用的微信的 apiurl 地址，会自动加上 token
+WechatAPI.patch("updateInfo", "https://api.weixin.qq.com/card/membercard/updateuser");
+
+
+// 调用刚扩展的方法，与其它 api 接口方法一样。
+api.updateInfo(jsonInfo, function (err, data, res) {
+  // TODO
+});
+```
+#### 覆盖已有的接口
+当要扩展的新接口名称已在 API 内定义，会抛出异常：
+`wechat-api already has a prototype named [uploadLogo]`
+如果知道这个异常的含义且依然想定义这个接口名称，应该给第三个参数传入`true`:
+```js
+WechatAPI.patch("uploadLogo", "https://api.weixin.qq.com/card/membercard/updateuser", true);
+```
+执行后控制台会输出警告，并覆盖原来`uploadLogo`这个接口。
+
+> **警告** 这个覆盖不只会覆盖 api 中的微信接口，所有定义给 api 的方法/成员变量 等都有可能被覆盖，请谨慎请用
+
+
 ### 多进程
 当多进程时，token需要全局维护，以下为保存token的接口。
 ```
