@@ -3,6 +3,7 @@ var urllib = require('urllib');
 var muk = require('muk');
 var path = require('path');
 var API = require('../');
+var fs = require('fs');
 
 describe('api_media.js', function () {
   var api = new API('invalidappid', 'secret');
@@ -17,7 +18,9 @@ describe('api_media.js', function () {
     api.isAccessTokenValid = isAccessTokenValid;
   });
 
-  describe('upload media', function () {
+  describe.only('upload media', function () {
+    var req = fs.createReadStream(path.join(__dirname, './fixture/pic.jpg'));
+    req.headers = {};
     ['Image', 'Voice', 'Video', 'Thumb'].forEach(function (method) {
       before(function () {
         muk(urllib, 'request', function (url, args, callback) {
@@ -38,6 +41,17 @@ describe('api_media.js', function () {
 
       it('upload' + method + ' should ok', function (done) {
         api['upload' + method](path.join(__dirname, './fixture/image.jpg'), function (err, data, res) {
+          expect(err).not.to.be.ok();
+          expect(data).to.have.property('type', 'image');
+          expect(data).to.have.property('media_id');
+          expect(data).to.have.property('created_at');
+          done();
+        });
+      });
+
+      it('upload' + method + 'Stream should ok', function (done) {
+        req.headers.type = method;
+        api['upload' + method + 'Stream'](req, function (err, data, res) {
           expect(err).not.to.be.ok();
           expect(data).to.have.property('type', 'image');
           expect(data).to.have.property('media_id');
@@ -157,7 +171,7 @@ describe('api_media.js', function () {
     });
     
     it('should ok from upstream', function(done){
-      var req = require('fs').createReadStream(path.join(__dirname, './fixture/image.jpg'));
+      var req = fs.createReadStream(path.join(__dirname, './fixture/image.jpg'));
       req.headers = {};
       api.uploadImageStream(req, function (err, data, res) {
         expect(err).not.to.be.ok();
