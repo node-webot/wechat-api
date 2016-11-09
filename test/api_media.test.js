@@ -139,4 +139,31 @@ describe('api_media.js', function () {
       });
     });
   });
+  
+  describe('upload image', function(){
+    before(function () {
+      muk(urllib, 'request', function (url, args, callback) {
+        var resp = {
+          "url":  "http://mmbiz.qpic.cn/mmbiz/gLO17UPS6FS2xsypf378iaNhWacZ1G1UplZYWEYfwvuU6Ont96b1roYsCNFwaRrSaKTPCUdBK9DgEHicsKwWCBRQ/0"
+        };
+        process.nextTick(function () {
+          callback(null, resp);
+        });
+      });
+    });
+
+    after(function () {
+      muk.restore();
+    });
+    
+    it('should ok from upstream', function(done){
+      var req = require('fs').createReadStream(path.join(__dirname, './fixture/image.jpg'));
+      req.headers = {};
+      api.uploadImageStream(req, function (err, data, res) {
+        expect(err).not.to.be.ok();
+        expect(data).to.have.property('url');
+        done();
+      });
+    });
+  });
 });
