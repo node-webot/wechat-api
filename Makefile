@@ -6,9 +6,9 @@ MOCHA = ./node_modules/mocha/bin/_mocha
 COVERALLS = ./node_modules/coveralls/bin/coveralls.js
 
 all:test
-  
+
 lint:
-	@eslint --fix lib index.js
+	@eslint --fix lib test index.js
 
 test:
 	@NODE_ENV=test $(MOCHA) -R $(REPORTER) -t $(TIMEOUT) \

@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('expect.js');
 var urllib = require('urllib');
 var muk = require('muk');
@@ -25,9 +27,9 @@ describe('api_media.js', function () {
       before(function () {
         muk(urllib, 'request', function (url, args, callback) {
           var resp = {
-            "type":"image",
-            "media_id":"usr5xL_gcxapoRjwH3bQZw_zKvcXL-DU4tRJtLtrtN71-3bXL52p3xX63ebp7tqA",
-            "created_at":1383233542
+            'type':'image',
+            'media_id':'usr5xL_gcxapoRjwH3bQZw_zKvcXL-DU4tRJtLtrtN71-3bXL52p3xX63ebp7tqA',
+            'created_at':1383233542
           };
           process.nextTick(function () {
             callback(null, resp);
@@ -102,7 +104,7 @@ describe('api_media.js', function () {
   describe('get media with json', function () {
     before(function () {
       muk(urllib, 'request', function (url, args, callback) {
-        var data = JSON.stringify({"errcode":40007, "errmsg":"invalid media_id"});
+        var data = JSON.stringify({'errcode':40007, 'errmsg':'invalid media_id'});
         var res =  {
           headers: {
             'content-type': 'application/json'
@@ -153,12 +155,12 @@ describe('api_media.js', function () {
       });
     });
   });
-  
+
   describe('upload image', function(){
     before(function () {
       muk(urllib, 'request', function (url, args, callback) {
         var resp = {
-          "url":  "http://mmbiz.qpic.cn/mmbiz/gLO17UPS6FS2xsypf378iaNhWacZ1G1UplZYWEYfwvuU6Ont96b1roYsCNFwaRrSaKTPCUdBK9DgEHicsKwWCBRQ/0"
+          'url':  'http://mmbiz.qpic.cn/mmbiz/gLO17UPS6FS2xsypf378iaNhWacZ1G1UplZYWEYfwvuU6Ont96b1roYsCNFwaRrSaKTPCUdBK9DgEHicsKwWCBRQ/0'
         };
         process.nextTick(function () {
           callback(null, resp);
@@ -169,7 +171,7 @@ describe('api_media.js', function () {
     after(function () {
       muk.restore();
     });
-    
+
     it('should ok from upstream', function(done){
       var req = fs.createReadStream(path.join(__dirname, './fixture/image.jpg'));
       req.headers = {};

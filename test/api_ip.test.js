@@ -1,3 +1,5 @@
+'use strict';
+
 var config = require('./config');
 var API = require('../');
 var expect = require('expect.js');

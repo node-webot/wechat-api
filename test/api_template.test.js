@@ -1,17 +1,18 @@
+'use strict';
+
 var config = require('./config');
 var API = require('../');
 var expect = require('expect.js');
 var urllib = require('urllib');
 var muk = require('muk');
 var puling = 'ofL4cs7hr04cJIcu600_W-ZwwxHg';
-var imageId = 'XDZxzuRWBPqI4R9n_nNR5uRVZVQCSneMoELyWKflwM2qF9K38vnVFzgaD97uCTUu';
 
 describe('api_template', function () {
   var api = new API(config.appid, config.appsecret);
   var mockError = function () {
     before(function () {
       muk(urllib, 'request', function (url, args, callback) {
-        var data = {"errcode":1, "errmsg":"mock error"};
+        var data = {'errcode':1, 'errmsg':'mock error'};
         var res =  {
           headers: {
             'content-type': 'application/json'
@@ -35,8 +36,8 @@ describe('api_template', function () {
       var url = 'http://weixin.qq.com/download';
       var data = {
         user: {
-          "value":'黄先生',
-          "color":"#173177"
+          'value':'黄先生',
+          'color':'#173177'
         }
       };
       api.sendTemplate(puling, templateId, url, data, function (err, data, res) {
@@ -62,8 +63,8 @@ describe('api_template', function () {
         var url = 'http://weixin.qq.com/download';
         var data = {
           user: {
-            "value":'黄先生',
-            "color":"#173177"
+            'value':'黄先生',
+            'color':'#173177'
           }
         };
         api.sendTemplate(puling, templateId, url, data, function (err, data, res) {

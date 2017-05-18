@@ -1,3 +1,5 @@
+'use strict';
+
 var config = require('./config');
 var API = require('../');
 var expect = require('expect.js');
@@ -7,7 +9,6 @@ var puling = 'ofL4cs7hr04cJIcu600_W-ZwwxHg';
 var imageId = 'XDZxzuRWBPqI4R9n_nNR5uRVZVQCSneMoELyWKflwM2qF9K38vnVFzgaD97uCTUu';
 var voiceId = '9R5BhAum7AEaGhwku0WhgvtO4C_7Xs78NoiRvm6v7IyoTljE4HH5o8E_UfnPrL0p';
 var thumbId = 'BHxGDVy7WY6BCOcv3AwbywUE630Vw0tAV_V8bzBaCZid4Km5fwXrVOso3X0zas4n';
-var movieId = 'b4F8SfaZZQwalDxwPjd923ACV5IUeYvZ9-dYKf5ytXrS-IImXEkl2U8Fl5EH-jCF';
 var cardId = 'pAtUNs-HV0evhGTWbU3ohp99tW7k';
 
 describe('api_customer', function () {
@@ -15,7 +16,7 @@ describe('api_customer', function () {
   var mockError = function () {
     before(function () {
       muk(urllib, 'request', function (url, args, callback) {
-        var data = {"errcode":1, "errmsg":"mock error"};
+        var data = {'errcode':1, 'errmsg':'mock error'};
         var res =  {
           headers: {
             'content-type': 'application/json'
@@ -157,8 +158,8 @@ describe('api_customer', function () {
       title: '音乐标题', // 可选
       description: '描述内容', // 可选
       musicurl: 'http://url.cn/xxx', // 音乐文件地址
-      hqmusicurl: "HQ_MUSIC_URL",
-      thumb_media_id: "THUMB_MEDIA_ID"
+      hqmusicurl: 'HQ_MUSIC_URL',
+      thumb_media_id: 'THUMB_MEDIA_ID'
     };
 
     it('sendMusic should ok', function (done) {
@@ -193,16 +194,16 @@ describe('api_customer', function () {
   describe('sendNews', function () {
     var articles = [
       {
-        "title":"Happy Day",
-        "description":"Is Really A Happy Day",
-        "url":"URL",
-        "picurl":"PIC_URL"
+        'title':'Happy Day',
+        'description':'Is Really A Happy Day',
+        'url':'URL',
+        'picurl':'PIC_URL'
       },
       {
-        "title":"Happy Day",
-        "description":"Is Really A Happy Day",
-        "url":"URL",
-        "picurl":"PIC_URL"
+        'title':'Happy Day',
+        'description':'Is Really A Happy Day',
+        'url':'URL',
+        'picurl':'PIC_URL'
       }
     ];
 
@@ -234,13 +235,13 @@ describe('api_customer', function () {
       });
     });
   });
-  
+
   describe.skip('sendCard', function() {
     var card = {
       // code:'12345', //option
       // openid: puling, //option
       card_id: cardId
-    }
+    };
     it('sendCard should ok', function(done) {
       api.sendCard(puling, card, function (err, data, res) {
         if (!err) {
