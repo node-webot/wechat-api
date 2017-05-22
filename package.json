@@ -27,7 +27,7 @@
     "mocha": "*",
     "expect.js": "*",
     "travis-cov": "*",
-    "coveralls": "*",
+    "coveralls": "2.11.4",
     "mocha-lcov-reporter": "*",
     "muk": "*",
     "rewire": "*",
