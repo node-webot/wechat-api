@@ -32,15 +32,21 @@ describe('api_template', function () {
   describe('sendTemplate', function () {
     it('sendTemplate should ok', function (done) {
       var templateId = '模板id';
-      // URL置空，则在发送后,点击模板消息会进入一个空白页面（ios）, 或无法点击（android）
-      var url = 'http://weixin.qq.com/download';
+      // 跳转目的地置空，则在发送后,点击模板消息会进入一个空白页面（ios）, 或无法点击（android）
+      var dest = {
+        url: 'http://weixin.qq.com/download',
+        miniprogram:{
+          appid: "xiaochengxuappid12345",
+          pagepath: "index?foo=bar"
+        }
+      };
       var data = {
         user: {
           'value':'黄先生',
           'color':'#173177'
         }
       };
-      api.sendTemplate(puling, templateId, url, data, function (err, data, res) {
+      api.sendTemplate(puling, templateId, dest, data, function (err, data, res) {
         if (!err) {
           expect(err).not.to.be.ok();
           expect(data).to.have.property('errcode', 0);
@@ -59,15 +65,21 @@ describe('api_template', function () {
 
       it('should not ok', function (done) {
         var templateId = '模板id';
-        // URL置空，则在发送后,点击模板消息会进入一个空白页面（ios）, 或无法点击（android）
-        var url = 'http://weixin.qq.com/download';
+        // 跳转目的地置空，则在发送后,点击模板消息会进入一个空白页面（ios）, 或无法点击（android）
+        var dest = {
+          url: 'http://weixin.qq.com/download',
+          miniprogram:{
+            appid: "xiaochengxuappid12345",
+            pagepath: "index?foo=bar"
+          }
+        };
         var data = {
           user: {
             'value':'黄先生',
             'color':'#173177'
           }
         };
-        api.sendTemplate(puling, templateId, url, data, function (err, data, res) {
+        api.sendTemplate(puling, templateId, dest, data, function (err, data, res) {
           expect(err).to.be.ok();
           expect(err.name).to.be('WeChatAPIError');
           expect(err.message).to.be('mock error');
