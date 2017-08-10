@@ -36,8 +36,8 @@ describe('api_template', function () {
       var dest = {
         url: 'http://weixin.qq.com/download',
         miniprogram:{
-          appid: "xiaochengxuappid12345",
-          pagepath: "index?foo=bar"
+          appid: 'xiaochengxuappid12345',
+          pagepath: 'index?foo=bar'
         }
       };
       var data = {
@@ -69,8 +69,8 @@ describe('api_template', function () {
         var dest = {
           url: 'http://weixin.qq.com/download',
           miniprogram:{
-            appid: "xiaochengxuappid12345",
-            pagepath: "index?foo=bar"
+            appid: 'xiaochengxuappid12345',
+            pagepath: 'index?foo=bar'
           }
         };
         var data = {
