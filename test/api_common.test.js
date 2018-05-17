@@ -1,3 +1,5 @@
+'use strict';
+
 var API = require('../');
 var urllib = require('urllib');
 var muk = require('muk');
@@ -77,7 +79,7 @@ describe('api_common', function () {
       before(function () {
         muk(urllib, 'request', function (url, args, callback) {
           process.nextTick(function () {
-            callback(null, {"access_token": "ACCESS_TOKEN","expires_in": 7200});
+            callback(null, {'access_token': 'ACCESS_TOKEN','expires_in': 7200});
           });
         });
       });
@@ -123,7 +125,7 @@ describe('api_common', function () {
     it('should ok', function (done) {
       var api = new API(config.appid, config.appsecret);
       api.preRequest(function (callback) {
-        callback();
+        return callback();
       }, [function (err) {
         expect(err).not.to.be.ok();
         done();
@@ -145,7 +147,7 @@ describe('api_common', function () {
 
       it('should not ok', function (done) {
         api.preRequest(function (callback) {
-          callback();
+          return callback();
         }, [function (err) {
           expect(err).to.be.ok();
           expect(err).have.property('message', 'mock getToken error');
@@ -220,10 +222,10 @@ describe('api_common', function () {
         api.preRequest(function (callback) {
           i++;
           if (i === 1) {
-            callback(null, {errcode: 40001});
-          } else {
-            callback(null, {errcode: 0});
-          }
+            return callback(null, {errcode: 40001});
+          } 
+          return callback(null, {errcode: 0});
+          
         }, [function (err) {
           expect(err).not.to.be.ok();
           done();

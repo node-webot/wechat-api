@@ -1,3 +1,5 @@
+'use strict';
+
 var config = require('./config');
 var API = require('../');
 var muk = require('muk');
@@ -11,7 +13,7 @@ describe('api_custom_service', function () {
     describe('getRecords mock', function () {
       before(function () {
         muk(urllib, 'request', function (url, args, callback) {
-          var data = {"recordlist": []};
+          var data = {'recordlist': []};
           var res =  {
             headers: {
               'content-type': 'application/json'
@@ -29,10 +31,10 @@ describe('api_custom_service', function () {
 
       it('getRecords should ok', function (done) {
         var condition = {
-          "starttime" : 123456789,
-          "endtime" : 987654321,
-          "number" : 10000,
-          "msgid"  : 1
+          'starttime' : 123456789,
+          'endtime' : 987654321,
+          'number' : 10000,
+          'msgid'  : 1
         };
 
         api.getRecords(condition, function (err, data, res) {

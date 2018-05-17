@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('expect.js');
 var config = require('./config');
 var API = require('../');
@@ -51,7 +53,7 @@ describe('api_tag.js', function () {
 //  });
 
 
-  // 6 批量为用户打标签 
+  // 6 批量为用户打标签
   it('membersBatchtagging should ok', function (done) {
     api.membersBatchtagging(tagId, [puling], function (err, data, res) {
       expect(err).not.to.be.ok();
@@ -60,7 +62,7 @@ describe('api_tag.js', function () {
       done();
     });
   });
- 
+
   // 5 获取标签的所有粉丝
   it('getTagUsers should ok', function (done) {
     api.getTagUsers(tagId, '', function (err, data, res) {
@@ -70,8 +72,8 @@ describe('api_tag.js', function () {
       done();
     });
   });
- 
-  // 7 批量为用户取消标签 
+
+  // 7 批量为用户取消标签
   it('membersBatchuntagging should ok', function (done) {
     api.membersBatchuntagging(tagId, [puling], function (err, data, res) {
       expect(err).not.to.be.ok();
@@ -80,8 +82,8 @@ describe('api_tag.js', function () {
       done();
     });
   });
- 
-  // 8 获取用户身上的标签列表 
+
+  // 8 获取用户身上的标签列表
   it('getUserTags should ok', function (done) {
     api.getUserTags(puling, function (err, data, res) {
       expect(err).not.to.be.ok();
